@@ -1,0 +1,54 @@
+/* Team Section */
+.team-container {
+    text-align: center;
+    background: #120024;
+    color: white;
+    padding: 80px 40px; /* Reduced top padding */
+    min-height: calc(100vh - 100px); /* Adjust this based on navbar height */
+}
+
+
+  
+  .mission-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .mission-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .team-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b599ff;
+    margin-bottom: 20px;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .team-card {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .team-card p {
+    font-weight: normal;
+    margin-top: 10px;
+    color: #666;
+  }
+  
