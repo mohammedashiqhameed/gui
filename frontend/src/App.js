@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About"
 import Chatbot from "./components/Chatbot"
+import Blog from "./components/Blog";
 import './index.css';
 
 
@@ -12,7 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/blog" element={<Blog />} /> */}
+        <Route path="/blog" element={<Blog />} />
         <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/about" element={<About />} />
       </Routes>
