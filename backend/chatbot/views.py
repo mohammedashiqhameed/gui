@@ -1,12 +1,12 @@
 from django.shortcuts import render
-
+import os
 # Create your views here.
 import requests
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-GEMINI_API_KEY = "AIzaSyBtitWxMBAsxnSycZb_pOzyvAFk4TLc_R4"
+GEMINI_API_KEY =  os.getenv("GEMINI_API_KEY")
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 @csrf_exempt
