@@ -1,91 +1,129 @@
+/* Main Blog Container */
 .blog-container {
     width: 100%;
     min-height: 100vh;
-    background-color: #120024;
+    background: linear-gradient(to bottom, #4b0082, #000);
     padding: 40px 20px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Blog Page Title */
 .blog-title {
-    font-size: 28px;
-    color: #f1eef8;
+    font-size: 36px;
+    color: #ffffff;
     margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Blog Post Return Section */
-.blog-return {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+/* Blog Submission Form */
+.blog-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 600px;
     margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.blog-return h2 {
-    font-size: 22px;
-    color: #222;
-    margin-bottom: 10px;
-}
-
-.blog-return p {
+.blog-form input,
+.blog-form textarea {
+    width: 100%;
+    padding: 14px;
     font-size: 16px;
-    color: #555;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: 0.3s;
 }
 
-/* Blog Section (Container for all blocks) */
+.blog-form input::placeholder,
+.blog-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.blog-form textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+.blog-form input:focus,
+.blog-form textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.blog-form button {
+    padding: 14px;
+    background: #ff5733;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 600;
+}
+
+.blog-form button:hover {
+    background: #c70039;
+    transform: scale(1.05);
+}
+
+/* Blog Section */
 .blog-section {
     display: flex;
     justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 25px;
 }
 
 /* Individual Blog Blocks */
 .blog-block {
-    background: white;
-    width: 300px;
-    height: 250px;
+    background: #0f3460;
+    width: 350px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    
-    text-align: center;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid #ff5733;
+}
+
+.blog-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Blog Titles */
 .blog-block h2 {
-    font-size: 20px;
-    color: #222;
-    text-align: left;
-    margin-bottom: 0;
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-weight: 700;
 }
 
-/* Blog Text */
-.blog-block h6 {
+/* Blog Content */
+.blog-block p {
+    font-size: 16px;
+    color: #dcdcdc;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Blog Date */
+.blog-block small {
     font-size: 14px;
-    color: #555;
-    text-align: left;
-    margin-top: 0;
-}
-
-/* Read More Button */
-.read-more {
-    margin-top: 10px;
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 100px;
-}
-
-.read-more:hover {
-    background-color: #0056b3;
+    color: #a0a0a0;
+    font-weight: 500;
+    text-align: right;
 }
