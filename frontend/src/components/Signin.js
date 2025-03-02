@@ -1,14 +1,31 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Auth.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Signing in with:", { email, password });
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/auth/login/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        localStorage.setItem("token", data.token); 
+        navigate("/"); 
+      } else {
+        alert(data.error);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Login failed");
+    }
   };
 
   return (

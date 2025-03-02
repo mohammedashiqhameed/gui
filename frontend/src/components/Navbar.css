@@ -41,4 +41,18 @@
   .auth-link:hover {
     color: #eef1f4;
   }
+  .logout-btn {
+    background: orangered;
+    border-radius:20px ;
+    padding: px 20px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    text-decoration: underline;
+    
+  }
   
