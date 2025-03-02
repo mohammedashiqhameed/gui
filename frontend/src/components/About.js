@@ -1,6 +1,6 @@
 import React from "react";
 import "./Team.css"; // Import CSS file
-import Navbarr from "./Navbarr";
+import Navbar from "./Navbar";
 
 const Team = () => {
   return (
